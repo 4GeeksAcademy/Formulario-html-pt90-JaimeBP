@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Pago</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container d-flex justify-content-center align-items-center min-vh-100">
+        <div class="card p-4 col-lg-8 col-md-10">
+            <h1 class="text-center mb-4">Formulario de Pago</h1>
+            <form>
+                <!-- Primera línea:  -->
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <label for="card" class="form-label">Card</label>
+                        <input type="text" class="form-control" id="card" placeholder="Número de tarjeta" required>
+                    </div>
+                    <div class="col-md-2">
+                        <label for="cvc" class="form-label">CVC</label>
+                        <input type="text" class="form-control" id="cvc" placeholder="CVC" maxlength="4" required>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="amount" class="form-label">Amount</label>
+                        <input type="number" class="form-control" id="amount" placeholder="0" required>
+                    </div>
+                </div>
+
+                <!-- Segunda línea -->
+                <div class="row mb-3">
+                    <div class="col-md-5">
+                        <label for="firstName" class="form-label">First Name</label>
+                        <input type="text" class="form-control" id="firstName" placeholder="Primer nombre" required>
+                    </div>
+                    <div class="col-md-7">
+                        <label for="lastName" class="form-label">Last Name</label>
+                        <input type="text" class="form-control" id="lastName" placeholder="Apellidos" required>
+                    </div>
+                </div>
+
+                <!-- Tercera línea -->
+                <div class="row mb-3">
+                    <div class="col-md-5">
+                        <label for="city" class="form-label">Comunidad</label>
+                        <input type="text" class="form-control" id="city" placeholder="Ciudad" required>
+                    </div>
+                    <div class="col-md-3">
+                        <label for="state" class="form-label">Ciudad</label>
+                        <select id="state" class="form-select" required>
+                            <option selected disabled>Selecciona...</option>
+                            <option value="state1">Valencia</option>
+                            <option value="state2">Castellon</option>
+                            <option value="state3">Alicante</option>
+                            <!-- Aqui habria que colocar todas las ciudades de España como opciones -->
+                        </select>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="postalCode" class="form-label">Postal Code</label>
+                        <input type="text" class="form-control" id="postalCode" placeholder="Código postal"
+                            maxlength="5" required>
+                    </div>
+                </div>
+
+                <!-- Cuarta línea:-->
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <label class="form-label">We accept</label>
+                        <div class="d-flex gap-2">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="paymentMethod" id="visa" required>
+                                <label class="form-check-label" for="visa">
+                                    <img src="images/visa.jpg" alt="Visa" width="40">
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="paymentMethod" id="mastercard">
+                                <label class="form-check-label" for="mastercard">
+                                    <img src="images/MasterCard.png" alt="MasterCard" width="40">
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="paymentMethod" id="paypal">
+                                <label class="form-check-label" for="paypal">
+                                    <img src="images/PayPal.png" alt="PayPal" width="40">
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="paymentMethod" id="amex">
+                                <label class="form-check-label" for="amex">
+                                    <img src="images/Amex.png" alt="Amex" width="40">
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="message" class="form-label">Message</label>
+                        <textarea class="form-control" id="message" rows="3"
+                            placeholder="Escribe un mensaje"></textarea>
+                    </div>
+                </div>
+
+                <!-- Botones -->
+                <div class="row mb-2">
+                    <div class="col-md-6">
+                        <button type="submit" class="btn btn-secondary w-100">Cancelar</button>
+                    </div>
+                    <div class="col-md-6">
+                        <button type="submit" class="btn btn-primary w-100">Enviar</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
